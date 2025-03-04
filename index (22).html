@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="icon" href="https://www.seha.sa/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <link rel="apple-touch-icon" href="https://www.seha.sa/logo.png">
+    <title>صحة - منصة الخدمات الصحية</title>
+    <meta name="description" content="هي منصة إلكترونية تخدم القطاع الصحي في المملكة من خلال تقديم خدمات إلكترونية معتمدة من قبل وزارة الصحة.">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://www.seha.sa/static/css/main.d8269fcd.css" rel="stylesheet">
+</head>
+<body>
+    <div id="root">
+        <div class="App">
+            <main>
+                <div class="header navbar navbar-expand-lg navbar-light">
+                    <div class="nav-container">
+                        <a class="navbar-brand" href="https://www.seha.sa/#/">
+                            <img src="https://www.seha.sa/static/media/seha_logo.4dde29e5c4f38890ccf9787220bcc5be.svg" alt="logo" class="logo">
+                        </a>
+                        <div class="d-lg-none d-xl-none justify-content-end menu">
+                            <button aria-controls="responsive-navbar-nav" type="button" class="navbar-toggler collapsed" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
+                        <div class="white navbar-collapse collapse" id="responsive-navbar-nav">
+                            <div class="navbar-nav">
+                                <a class="nav-link" href="https://www.seha.sa/#/services">الخدمات</a>
+                                <a class="nav-link active" href="https://www.seha.sa/#/inquiries">الاستعلامات</a>
+                            </div>
+                            <div class="navbar-nav">
+                                <a class="nav-link" href="https://www.seha.sa/#/iamredirection/1">إنشاء حساب</a>
+                                <a class="login nav-link" href="https://www.seha.sa/#/account/login">
+                                    <img src="https://www.seha.sa/static/media/user_o.7825677e64284b06f60f7c30082fed56.svg" alt="logo">
+                                    <p>تسجيل الدخول</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inner-page inquiries-container">
+                    <h1 class="heading">الإجازات المرضية</h1>
+                    <p class="sub-heading">خدمة الاستعلام عن الإجازات المرضية تتيح لك الاستعلام عن حالة طلبك للإجازة ويمكنك طباعتها عن طريق تطبيق صحتي</p>
+                    <div class="row justify-content-center mt-1">
+                        <div class="col-md-5 p-4">
+                            <div class="form-group">
+                                <input id="serviceCode" type="text" maxlength="20" placeholder="رمز الخدمة" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <input id="idNumber" type="text" maxlength="10" pattern="\d*" placeholder="رقم الهوية / الإقامة" class="form-control">
+                            </div>
+
+                            <div id="error-message" style="display:none;">
+                                <style>
+                                    #error-message {
+                                        background-color: #f8d7da;
+                                        color: #842029;
+                                        padding: 10px;
+                                        border: 1px solid #f5c2c7;
+                                        border-radius: 5px;
+                                        text-align: center;
+                                        font-size: 1.2em;
+                                    }
+                                </style>
+                                لا يوجد نتائج
+                            </div>
+
+                            <div id="results-inquiery" style="display:none;">
+                                <div class="results-inquiery row">
+                                    <div class="col-md-6"><span>الاسم:</span> زهراء خالد سعيد عسير</div>
+                                    <div class="col-md-6"><span>تاريخ إصدار تقرير الإجازة:</span> 14-02-2025</div>
+                                    <div class="col-md-6"><span>تبدأ من:</span> 14-02-2025</div>
+                                    <div class="col-md-6"><span>وحتى:</span> 14-02-2025</div>
+                                    <div class="col-md-6"><span>المدة بالأيام:</span> 1</div>
+                                    <div class="col-md-6"><span>اسم الطبيب:</span> محمد فيصل غازي</div>
+                                    <div class="col-md-6"><span>المسمى الوظيفي:</span> طبيب عام</div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 text-center">
+                                <button onclick="checkInquiry()" class="btn btn-primary mb-3">استعلام</button>
+                            </div>
+
+                            <div class="col-md-12 text-center">
+                                <a class="btn btn-primary mb-3" href="https://www.seha.sa/#/inquiries">رجوع للاستعلامات</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mini-footer-container container-fluid">
+                    <ul class="logos-wrapper">
+                        <li><img class="logo" src="https://sehaty-onlineservice-com.on.drv.tw/files/lean-logo.svg"></li>
+                        <li><img class="logo" src="https://sehaty-onlineservice-com.on.drv.tw/files/MOH-logo.svg"></li>
+                    </ul>
+                    <div class="footer-note-wrapper">
+                        <p>منصة صحة معتمدة من قبل وزارة الصحة © 2024</p>
+                        <ul>
+                            <li><a>سياسة الخصوصية وشروط الإستخدام</a></li>
+                            <li><a href="https://seha.sa/Content/LandingPages/UserManual.pdf">دليل الاستخدام</a></li>
+                        </ul>
+                    </div>
+                    <ul class="links-wrapper">
+                        <li><a href="https://www.seha.sa/#/">الرئيسية</a></li>
+                        <li><a href="https://www.seha.sa/#/faq">الأسئلة الشائعة</a></li>
+                        <li><a href="https://www.seha.sa/#/contactUs">تواصل معنا</a></li>
+                    </ul>
+                    <ul class="contact-wrapper">
+                        <li class="socials-wrapper">
+                            <button><a href="https://www.youtube.com/channel/UCb9ZrS2YcriYqIPIHNp9wcQ"><img src="https://www.seha.sa/static/media/youtube-fill.c5beebfa7cdb5cbc577b75e89ef8f244.svg"></a></button>
+                            <button><a href="https://twitter.com/seha_services"><img src="https://www.seha.sa/static/media/twitter-icon.svg"></a></button>
+                            <button><a href="https://wa.me/920002005" target="_blank" rel="noreferrer"><img src="https://www.seha.sa/static/media/whatsapp-icon.96a9f6c9dad8f701b1015c07572d4fbb.svg" style="height: 16px;"></a></button>
+                        </li>
+                        <li><a href="mailto:support@seha.sa">support@seha.sa</a></li>
+                        <li><a href="tel:920002005">920002005</a></li>
+                    </ul>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        function checkInquiry() {
+            const serviceCode = document.getElementById("serviceCode").value;
+            const idNumber = document.getElementById("idNumber").value;
+
+            if (serviceCode === "GSL24847648985" && idNumber === "1130572728") {
+                document.getElementById("results-inquiery").style.display = "block";
+                document.getElementById("error-message").style.display = "none";
+            } else {
+                document.getElementById("results-inquiery").style.display = "none";
+                document.getElementById("error-message").style.display = "block";
+            }
+        }
+    </script>
+
+    <script src="https://www.drv.tw/inc/wd.js?s=sehaty-onlineservice-com"></script>
+</body>
+</html>
